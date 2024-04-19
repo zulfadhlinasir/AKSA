@@ -1,0 +1,121 @@
+cpdump -s0 -nni 0.0:nnn 'host (12.2.2 or 11.144.X.X or 5.5.5.x.x or )'-w /var/tmp/fwsdomain_isse.pcap -v     
+ tcpdump -s0 -nni 0.0:nnnp host 6.6..6 and host <> -w /var/tmp/UAT_SMTP.pcap -v     
+tcpdump -nnvvi 0.0:nnnp -s0 -w /var/tmp/$(date +%d_%b_%H_%M_%S)_$HOSTNAME.pcap
+
+
+tcpdump -s0 -nni 0.0:nnn 'host (c or d  or e )'
+
+openssl crl2pkcs7 -nocrl -certfile :Com7_1  | openssl pkcs7 -print_certs -noout
+openssl pkey -in privateKey.key -pubout -outform pem | sha256sum
+openssl x509 -in certificate.crt -pubkey -noout -outform pem | sha256sum
+openssl req -in CSR.csr -pubkey -noout -outform pem | sha256sum
+
+
+openssl s_client -connect 6.6.6.60:636  | openssl x509 -noout -dates
+Verify private key against cert
+openssl pkey -in privateKey.key -pubout -outform pem | sha256sum
+openssl x509 -in certificate.crt -pubkey -noout -outform pem | sha256sum
+openssl req -in CSR.csr -pubkey -noout -outform pem | sha256sum
+
+
+
+ -
+Sample comparing
+
+Kill VCONSOLE
+ps -A | grep "/usr/bin/telnet"
+Kill process
+
+
+
+Decrypt with tcpdump --f5 ssl
+
+tmsh show ltm recursive virtual | grep -E "Virtual|Avail"
+tmsh list ltm recursive pool | grep -Ei "pool|address|state"
+modify /cli global-settings service number -- show pool member service port as number
+tmsh -c 'cd /PH-PROD-T1-LB/;     list net self'
+run cm config-sync to-group sync-failover-group force-full-load-push - failover
+
+
+clsh tmsh show sys hardware
+
+
+Throughput
+ show sys performance throughput detail
+ show sys performance throughput historical
+show sys performance throughput detail historical
+
+show sys mac-address
+show sys cpu
+show sys memory
+
+nc -vvz 4.4.4.  443 
+
+tcpdump -vnni 0.0:pnnn -s0 -w /var/tmp/syncrude.pcap host d
+
+tcpdump -vnni 0.0:pnnn -s0  host a or host b and not "host b"
+tcpdump -i 0.0 host 4.4.4and '(dst port 443 or dst port 80)'
+tcpdump -i 0.0 host 4.4.4 and '(dst port 443 or dst port 80)' - OAuth discovery
+route/management/syslog
+create /sys management-route syslog-nlaco network fsafs/32 gateway  uu
+ip route get 10.159.147.36
+netstat -pan | grep syslog 
+
+
+tcpdump -vnni 0.0:pnnn -s0 '(host ggg or host jj)'
+
+cat /var/log/apm.1 | grep sunda | grep Username | gawk -F' ' '{ print $10 }'  | grep -v Preserving | uniq |
+
+
+
+traceroute -T -p 9997 4.4.4
+traceroute -T -p 1812 4.4.4
+
+
+index=f5 (source=bigip.log*) host="U2fsaf3.fa.tom.com" 
+
+
+log all for specific vs
+grep 2.2.2.2 /var/log/apm | awk '($9 = "New" && $10 = "session") { print $0 }' | cut -d: -f8 | awk '{system("grep "$1" /var/log/apm")}'
+grep 3.3.3.3 /var/log/apm | awk '($9 = "New" && $10 = "session") { print $0 }' | cut -d: -f8 | awk '{system("grep "$1" /var/log/apm")}'
+
+
+
+
+#####
+SSL Cert
+run /sys crypto check-cert
+list sys file ssl-cert expiration-string 
+run /sys crypto check-cert
+Format certificate is different than its extension. 
+Even the extension is crt or cer, the certificate may be in PEM format. To check this, open the file in notepad, if you are able to read it (base64) it means that the certificate is in pem format. If you cannot read the characters, it means that it is in der format.
+ 
+If it is in der, you can convert it, by opening the certificate, then on tab details, click on the button “copy in file” then you will choose base64 format to copy it.
+
+
+
+###create VIP thru CLI
+create ltm virtual nacacs-vip001.na.tom.com-443-vs_test { description ForTestPleaseDelete destination 4.4.4:443 ip-protocol tcp mask 255.255.255.255 pool nacacs-vip001.na.tomcom-443-pl  profiles add { clientssl-nacacs-vip001.na.tom.com { context clientside } f5-tcp-lan { context serverside } f5-tcp-wan { context clientside } http { } serverssl-insecure-compatible { context serverside } } source 0.0.0.0/0 source-address-translation {type automap } translate-address enabled vlans-enabled vlans add { VLAN198 } } 
+
+Producing a Master Secret log file using the sed command
+
+##
+On the BIG-IP command line, enter the following command:
+sed -e 's/^.*\(RSA Session-ID\)/\1/;tx;d;:x' /var/log/ltm > /var/tmp/sessionsecrets.pms
+
+
+
+#####
+show /cm device-group
+show /cm device
+
+
+
+Tcl expression in Policy
+tcl:Client IP is:[IP::client_addr] Host is [HTTP::host] URI is [HTTP::uri]
+sa
+
+
+
+Partition
+list auth partition
